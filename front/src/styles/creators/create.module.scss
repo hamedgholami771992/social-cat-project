@@ -1,0 +1,116 @@
+.createBrand {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+  color: #e5e7eb;
+
+  &__container {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  &__header {
+    text-align: left;
+    margin-bottom: 28px;
+
+    h1 {
+      font-size: 34px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #94a3b8;
+    }
+  }
+
+  &__card {
+    background: linear-gradient(180deg, #020617, #020617);
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+    // padding: 28px;
+
+    form {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .field {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #c7d2fe;
+          margin-left: 8px;
+        }
+
+        .input {
+          height: 44px;
+          padding: 0 14px;
+          font-size: 15px;
+          color: #e5e7eb;
+          background: #020617;
+          border-radius: 10px;
+          border: 1px solid #1e293b;
+          transition: all 0.2s ease;
+
+          &::placeholder {
+            color: #64748b;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
+          }
+        }
+      }
+
+      .error {
+        font-size: 14px;
+        color: #f87171;
+        padding-left: 2px;
+      }
+
+      .actions {
+        margin-top: 8px;
+
+        .button {
+          height: 46px;
+          width: 100%;
+          border-radius: 12px;
+          border: none;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 600;
+          color: #ffffff;
+          background: linear-gradient(135deg, #6366f1, #4f46e5);
+          box-shadow: 0 12px 30px rgba(79, 70, 229, 0.45);
+          transition: all 0.2s ease;
+
+          &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 40px rgba(79, 70, 229, 0.55);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+
+          &:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
